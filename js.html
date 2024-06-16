@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+    <script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const player = new Plyr('.vid-1');
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const player = new Plyr('.vid-2');
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const player = new Plyr('.vid-3');
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const player = new Plyr('.vid-4');
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const player = new Plyr('.vid-5');
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const player = new Plyr('.vid-6');
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const player = new Plyr('.vid-7');
+        });
+        
+        var count = 0;
+        function one(){
+            count++;
+        }
+        function two(){
+            count++;
+        }
+        function t3(){
+            count++;
+        }
+        function f4(){
+            count++;
+        }
+        function f5(){
+            count++;
+        }
+        function six(){
+            count++;
+        }
+        function s7(){
+            count++;
+        }
+        function check(){
+            if(count >= 7){
+                console.log("Success");
+            } else {
+                console.log("Not enough videos played yet.");
+            }
+            console.log("Total videos played:", count);
+        }
+    </script>
+    <title>Document</title>
+    <style>
+       body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 15px auto;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #4e76df;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+}
+
+h1, h3 {
+    margin: 0;
+    font-weight: normal;
+}
+
+table {
+    width: 100%;
+}
+
+table td {
+    padding: 10px;
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4e76df;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3558bc;
+}
+
+.image {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 250px;
+    margin-left: 150px;
+}
+
+.image{
+    width: 300px; 
+    height: 200px; 
+    border: none; 
+}
+
+    </style>
+</head>
+<body>
+<header>
+<label><h1>JS</h1></label>
+    <h3>JAVASCRIPT</h3>
+</header>
+<div class="container">
+    <table cellspacing="20px" cellpadding="10px" border="1">
+        <tr>
+            <td><span>Video-1</span><video onclick="one()" controls crossorigin class="vid-1">
+                <source src="images/vid-3.mp4">
+            </video></td>
+            <td><span>Video-2</span><video onclick="two()" controls crossorigin class="vid-2">
+                <source src="images/vid-3.mp4">
+            </video></td>
+            <td><span>Video-3</span><video onclick="t3()" controls crossorigin class="vid-3">
+                <source src="images/vid-3.mp4">
+            </video></td>
+        </tr>
+        <tr>
+            <td><span>Video-4</span><video onclick="f4()" controls crossorigin class="vid-4">
+                <source src="images/vid-3.mp4">
+            </video></td>
+            <td><span>Video-5</span><video onclick="f5()" controls crossorigin class="vid-5">
+                <source src="images/vid-3.mp4">
+            </video></td>
+            <td><span>Video-6</span><video onclick="six()" controls crossorigin class="vid-6">
+                <source src="images/vid-3.mp4">
+            </video></td>
+        </tr>
+        <tr>
+            <td><span>Video-7</span><video onclick="s7()" controls crossorigin class="vid-7">
+                <source src="images/vid-3.mp4">
+            </video></td>
+        </tr>
+    </table>
+</div>
+<iframe type="video" scrolling="no" src="images/coding2.gif" class="image"></iframe>
+<button onclick="check()"><a href="jsques.html">CLICK ME</a></button>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #ad64ff;
+        display: block;
+    }
+    
+    li {
+        float: left;
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 20px 30px;
+        text-decoration: none;
+    }
+    
+    li a:hover:not(.active) {
+        background-color: #111;
+    }
+    
+    .active {
+        background-color: #000000;
+        border-right: 1px solid #bbb;
+    }
+    
+</style>
+</head>
+<body>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li style="float:right"><a class="active" href="About.html">About</a></li>
+        <li style="float: right;"><a class="active" href="login.php">login</a></li>
+    </ul>
+    <center>
+        <form>
+            <lable>NAME:</lable>
+            <input type="text" placeholder="Enter your Name" name="user">
+            <label>FEEDBACK</label>
+            <textarea resize="yes" placeholder="Enter you feedback" name="feedback"></textarea>
+        </form>
+    </center>
+</body>
+</html>
+<?php
+extract($_REQUEST);
+$file=fopen("future.txt","a");
+fwrite($file,"Name:");
+fwrite($file,$user."\n");
+fwrite($file,"Feedback:");
+fwrite($file,$feedback."\n");
+fclose($file);
+?>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <title>Courses</title>
+    <style>
+        body {
+            background-color: white;
+            background-image: url(silver.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        
+
+    
+        .container {
+            margin: 50px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        .container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .course-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .course-item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .course-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .course-item h2 {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .course-item p {
+            margin: 10px;
+            color: #666;
+        }
+
+        .course-item img {
+            max-width: 50px; 
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #ad64ff;
+            display: block;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 30px;
+            text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+        
+        .active {
+            background-color: #000000;
+            border-right: 1px solid #bbb;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li style="float:right"><a class="active" href="About.html">About</a></li>
+        <li style="float: right;"><a class="active" href="login.php">login</a></li>
+    </ul>
+    <div class="container">
+        <h1>BASIC</h1>
+        <ol type="none" class="course-list">
+            <li class="course-item">
+                <a href="html.html"><img src="images/html.png" alt="HTML"></a>
+                <h2>HTML</h2>
+                <p>Web pages can be created and modified by using professional HTML editors. However, for learning HTML, we recommend a simple text editor like Notepad (PC) or TextEdit (Mac). We believe that using a simple text editor is a good way to learn HTML. Follow the steps below to create your first web page with Notepad or TextEdit.</p>
+            </li>
+            <li class="course-item">
+                <a href="css.html"><img src="images/css.png" alt="CSS"></a>
+                <h2>CSS</h2>
+                <p>CSS is designed to enable the separation of content and presentation, including layout, colors, and fonts. This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the structural content, and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.</p>
+            </li>
+            <li class="course-item">
+                <a href="js.html"><img src="images/js.png" alt="JavaScript"></a>
+                <h2>JavaScript</h2>
+                <p>JavaScript, often abbreviated as JS, is a programming language and core technology of the World Wide Web, alongside HTML and CSS. As of 2024, 98.9% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.</p>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>

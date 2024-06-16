@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Html Quiz
+</title>
+<link rel="stylesheet" href="style.css">
+<style>
+
+.correct {
+    margin-left: 10px;
+    color: green;
+}
+
+.incorrect {
+    margin-left: 10px;
+    color: red;
+}
+
+
+
+.maddy {
+    background-color: red;
+}
+
+.container {
+    margin-top: 100px;
+    border: 10px solid black;
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    background-color: violet;
+}
+
+
+
+.madhan {
+    margin-top: 100px;
+    border: 10px solid black;
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+}
+
+.header {
+    background-color: black;
+    height: 100px;
+    text-align: center;
+    padding: 3px;
+    color: white;
+}
+
+body {
+    background-color: #ebe2e2
+}
+
+font {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    background-color: rgb(245, 158, 245);
+    cursor: pointer;
+}
+</style>
+<script type="text/javascript">
+    function check(){
+  var inputValue = document.getElementById("first").value;
+  var one1=document.getElementById("valid");
+  var one=document.getElementById("one");
+  var two=document.getElementById("two");
+  var three=document.getElementById("three");
+  var valid1=document.getElementById("valid1");
+  var valid2=document.getElementById("valid2");
+  var valid3=document.getElementById("valid3"); 
+  var range=document.getElementById("range").value;
+  var head=document.getElementById("head");
+  var body=document.getElementById("body");
+  var other=document.getElementById("other");
+  var handb=document.getElementById("handb");
+  var o=document.getElementById("o");
+  var num=document.getElementById("four").value;
+  var mark=document.getElementById("mark");
+  var ans=document.getElementById("ans");
+  var count=0;
+  var comparisonString = "Hyper Text Markup Language";
+  var comp ="the world wide web consortium";
+  if (inputValue === comparisonString) {
+     one1.classList.add("correct");
+    one1.innerHTML="CORRECT";
+    count++;
+  } else {
+    one1.classList.add("incorrect");
+    one1.innerHTML="INCORRECT";
+}
+if(three.checked){
+    valid1.classList.add("correct");
+    valid1.innerHTML="CORRECT";
+    count++;
+}
+else if(two.checked){
+    valid2.classList.add("incorrect");
+    valid2.innerHTML="INCORRECT"; 
+}
+else{
+    valid3.classList.add("incorrect");
+    valid3.innerHTML="INCORRECT";
+}
+if(range==5){
+    ans.classList.add("correct");
+    ans.innerHTML="CORRECT";
+    count++;
+}
+else{
+    ans.classList.add("incorrect");
+    ans.innerHTML="INCORRECT";
+}
+if(head.checked && body.checked){
+    handb.classList.add("correct");
+    handb.innerHTML="CORRECT";
+    count++;
+
+}
+else if(head.checked || body.checked){
+    handb.classList.add("incorrect");
+    handb.innerHTML="INCORRECT";
+}
+else{
+    o.classList.add("incorrect");
+    o.innerHTML="INCORRECT";
+}
+if(num==1990){
+    n.classList.add("correct");
+    n.innerHTML="CORRECT";
+    count++;
+}
+else{
+    n.classList.add("incorrect");
+    n.innerHTML="INCORRECT";
+}
+    
+    var six = document.getElementById("six").value;
+        var seven1 = document.getElementById("seven1");
+        var seven2 = document.getElementById("seven2");
+        var seven3 = document.getElementById("seven3");
+        var eight = document.getElementById("eight").value;
+        var sixAns = 6;
+        var sevenAns = "both";
+        var eightAns = "br";
+        var ans6=document.getElementById("6ans");
+        var ans7=document.getElementById("7ans");
+        var ans8=document.getElementById("8ans");
+        if (six == sixAns) {
+            ans6.classList.add("correct");
+            ans6.innerHTML = "CORRECT";
+            count++;
+        } else {
+            ans6.classList.add("incorrect");
+            ans6.innerHTML = "INCORRECT";
+        }
+
+        if (seven1.checked && seven2.checked ) {
+            ans7.classList.add("correct");
+            ans7.innerHTML = "CORRECT";
+            count++;
+        } else {
+            ans7.classList.add("incorrect");
+            ans7.innerHTML = "INCORRECT";
+        }
+
+        if (eight.toLowerCase() == eightAns) {
+            ans8.classList.add("correct");
+            ans8.innerHTML = "CORRECT";
+            count++;
+        } else {
+            ans8.classList.add("incorrect");
+            ans8.innerHTML = "INCORRECT";
+        }
+        mark.innerHTML="YOUR MARK:"+count;
+    }
+</script>
+</head>
+<body>
+    <div class="mad">
+    <center>
+    <div class="header">
+        <h1>HTML TEST</h1>
+    </div>
+    </center>
+    <br><br>
+    <div class="forms">
+<form>
+    <font>
+        <fieldset>
+<label>1.What does HTML stand for?</label>
+<input type="text"  name="Hyper Text Markup Language" id="first"><div class="correct" id="valid" ></div>
+<br><br>
+<label>2.Who is making the Web standards?</label><br><br>
+<input type="radio" id="one" value="2" name="mad" >Google<br><br><div id="valid3"></div>
+<input type="radio" id="two" value="2" name="mad" >Microsoft<br><br><div id="valid2"></div>
+<input type="radio" id="three" value="2" name="mad" >the world wide web consortium   <div id="valid1"></div><br><br>
+<label>3.What is latest version of HTML</label>
+<input type="number" id="range" name="version" min="1.0" max="10.0"> <br><br><div id="ans"></div>
+<label>4.In Which year was HTML was found(14.12.yyyy)</label><br><Br>
+<input type="number" id="four"><br><Br><div id="n"></div>
+<label>5.what are tag that have in comman HTML?</label><br><br>
+<input type="radio" value="yes" id="head">head<Br><BR><div id="handb"></div>
+<input type="radio" value="yes" id="body">body<Br><Br>
+<input type="radio" value="yes" id="other">other<br><Br><div id="o"></div>
+    <center>
+        
+</center>
+</font>
+<body>
+    <form>
+        <font>
+        <label>6.How many levels of headings in HTML?</label><br><br>
+        <input type="number" id="six" max="10"><span id="6ans"></span><br><br>
+        <label>7. The purpose of markup is to?</label><br><br>
+        <input type="checkbox" value="add hypertext capabilities" id="seven1">add hypertext capabilities<br><br>
+        <input type="checkbox" value="enhance the document" id="seven2">enhance the document<br><Br>
+        <input type="checkbox" value="both" id="seven3">Both<br><Br>
+            <span id="7ans"></span><br><br>
+        <label>8.Which of the following tags do not require a terminator?<span id="8ans"></span></label><br><br>
+        <input type="text" id="eight"><br><Br><center>
+            <button type="submit"  value="Submit"  onclick="alert('Thanks for attending')">Sumbit</button>             
+           
+            </font>
+    </form>
+    <button type="submit"><a href="home.html" style="color: black;">Back</a></button></center>
+</div>
+</filedset>
+<center><button type="submit" onclick="check()">check</button><div id="mark"></div></center>
+</div>
+</body>
+</html>

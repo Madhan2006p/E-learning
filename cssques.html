@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Css Quiz</title>
+<link rel="stylesheet" href="style.css">
+<style>
+
+.correct {
+    margin-left: 10px;
+    color: green;
+}
+
+.incorrect {
+    margin-left: 10px;
+    color: red;
+}
+
+
+
+.maddy {
+    background-color: red;
+}
+
+.container {
+    margin-top: 100px;
+    border: 10px solid black;
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    background-color: violet;
+}
+
+
+
+.madhan {
+    margin-top: 100px;
+    border: 10px solid black;
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+}
+
+.header {
+    background-color: black;
+    height: 100px;
+    text-align: center;
+    padding: 3px;
+    color: white;
+}
+
+body {
+    background-color: #ebe2e2
+}
+
+font {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    background-color: rgb(245, 158, 245);
+    cursor: pointer;
+}
+</style>
+<script type="text/javascript">
+    function check(){
+  var inputValue = document.getElementById("first").value;
+  var one1=document.getElementById("valid");
+  var one=document.getElementById("one");
+  var two=document.getElementById("two");
+  var three=document.getElementById("three");
+  var valid1=document.getElementById("valid1");
+  var valid2=document.getElementById("valid2");
+  var valid3=document.getElementById("valid3"); 
+  var range=document.getElementById("range").value;
+  var head=document.getElementById("head");
+  var body=document.getElementById("body");
+  var other=document.getElementById("other");
+  var handb=document.getElementById("handb");
+  var o=document.getElementById("o");
+  var num=document.getElementById("four").value;
+  var mark=document.getElementById("mark");
+  var ans=document.getElementById("ans");
+  var count=0;
+  var comparisonString = "CSS is a style sheet language";
+  var comp ="style";
+  if (inputValue === comparisonString) {
+     one1.classList.add("correct");
+    one1.innerHTML="CORRECT";
+    count++;
+  } else {
+    one1.classList.add("incorrect");
+    one1.innerHTML="INCORRECT";
+}
+if(three.checked){
+    valid1.classList.add("correct");
+    valid1.innerHTML="CORRECT";
+    count++;
+}
+else if(two.checked){
+    valid2.classList.add("incorrect");
+    valid2.innerHTML="INCORRECT"; 
+}
+else{
+    valid3.classList.add("incorrect"); 
+    valid3.innerHTML="INCORRECT";
+}
+if(range==3){
+    ans.classList.add("correct");
+    ans.innerHTML="CORRECT";
+    count++;
+}
+else{
+    ans.classList.add("incorrect");
+    ans.innerHTML="INCORRECT";
+}
+if(head.checked && body.checked){
+    handb.classList.add("correct");
+    handb.innerHTML="CORRECT";
+    count++;
+
+}
+else if(head.checked || body.checked){
+    handb.classList.add("incorrect");
+    handb.innerHTML="INCORRECT";
+}
+else{
+    o.classList.add("incorrect");
+    o.innerHTML="INCORRECT";
+}
+if(num==2010){
+    n.classList.add("correct");
+    n.innerHTML="CORRECT";
+    count++;
+}
+else{
+    n.classList.add("incorrect");
+    n.innerHTML="INCORRECT";
+}
+    
+    var six = document.getElementById("six").value;
+        var seven1 = document.getElementById("seven1");
+        var seven2 = document.getElementById("seven2");
+        var seven3 = document.getElementById("seven3");
+        var eight = document.getElementById("eight").value;
+        var sixAns = 3;
+        var sevenAns = "both";
+        var eightAns = "linear-gradient()";
+        var ans6=document.getElementById("6ans");
+        var ans7=document.getElementById("7ans");
+        var ans8=document.getElementById("8ans");
+        if (six == sixAns) {
+            ans6.classList.add("correct");
+            ans6.innerHTML = "CORRECT";
+            count++;
+        } else {
+            ans6.classList.add("incorrect");
+            ans6.innerHTML = "INCORRECT";
+        }
+
+        if (seven1.checked && seven2.checked ) {
+            ans7.classList.add("incorrect");
+            ans7.innerHTML = "INCORRECT";
+            count++;
+        } else {
+            ans7.classList.add("incorrect");
+            ans7.innerHTML = "INCORRECT";
+        }
+
+        if (eight.toLowerCase() == eightAns) {
+            ans8.classList.add("correct");
+            ans8.innerHTML = "CORRECT";
+            count++;
+        } else {
+            ans8.classList.add("incorrect");
+            ans8.innerHTML = "INCORRECT";
+        }
+        mark.innerHTML="YOUR MARK:"+count;
+    }
+</script>
+</head>
+<body>
+    
+    <div class="mad">
+    <center>
+    <div class="header">
+        <h1>CSS TEST</h1>
+    </div>
+    </center>
+    <br><br>
+    <fieldset>
+    <div class="forms">
+        
+<form>
+    <font>
+       
+<label>1.What is CSS?</label>
+<input type="text"  name="Hyper Text Markup Language" id="first"><div class="correct" id="valid" ></div>
+<br><br>
+<label>2. Which of the following tag is used to embed css in html page?</label><br><br>
+<input type="radio" id="one" value="2" name="mad" >script<br><br><div id="valid3"></div>
+<input type="radio" id="two" value="2" name="mad" >css<br><br><div id="valid2"></div>
+<input type="radio" id="three" value="2" name="mad" >style  <div id="valid1"></div><br><br>
+<label>3.What is latest version of CSS</label>
+<input type="number" id="range" name="version" min="1.0" max="10.0"> <br><br><div id="ans"></div>
+<label>4.In Which year was CSS was found year</label><br><Br>
+<input type="number" id="four"><br><Br><div id="n"></div>
+<label>5.Which of the following CSS selector is used to specify a rule to bind a particular unique element? </label><br><br>
+<input type="radio" value="yes" id="head">tag<Br><BR><div id="handb"></div>
+<input type="radio" value="yes" id="body">class<Br><Br>
+<input type="radio" value="yes" id="other">other<br><Br><div id="o"></div>
+    <center>
+        
+</center>
+</font>
+<body>
+    <form>
+        <font>
+        <label>6.How many letter in CSS?</label><br><br>
+        <input type="number" id="six" max="10"><span id="6ans"></span><br><br>
+        <label>7.Which of the following has introduced text, list, box, margin, border, color, and background properties?</label><br><br>
+        <input type="checkbox" value="add hypertext capabilities" id="seven1">HTML<br><br>
+        <input type="checkbox" value="enhance the document" id="seven2">Ajax<br><Br>
+        <input type="checkbox" value="both" id="seven3">CSS<br><Br>
+            <span id="7ans"></span><br><br>
+        <label>8.Which of the following function defines a linear gradient as a CSS image?<span id="8ans"></span></label><br><br>
+        <input type="text" id="eight"><br><Br><center>
+            <button type="submit"  value="Submit"  onclick="alert('Thanks for attending')">Sumbit</button>             
+              
+            </font>
+    </form>
+    <button type="submit"><a href="home.html" style="color: black;">Back</a></button></center>
+</div>
+</form>
+<center><button type="submit" onclick="check()">check</button><div id="mark"></div></center>
+</div>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
+    <title>About</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.about {
+  padding: 50px;
+  text-align: center;
+}
+
+.image img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.content h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.inline-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.inline-btn:hover {
+  background-color: #0056b3;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.box {
+  flex: 1;
+  max-width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.box i {
+  font-size: 48px;
+  color: #007bff;
+}
+
+.box h3 {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.box p {
+  font-size: 16px;
+  color: #666;
+}
+ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #ad64ff;
+            display: block;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 30px;
+            text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+        
+        .active {
+            background-color: #000000;
+            border-right: 1px solid #bbb;
+        }
+        .btn{
+          background-color:#007bff;
+          color: aliceblue;
+          justify-content: center;
+          align-items: center;
+          padding: 1%;
+          border-radius: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li style="float:right"><a class="active" href="About.html">About</a></li>
+        <li style="float: right;"><a class="active" href="login.php">login</a></li>
+    </ul>
+    <section class="about">
+
+        <div class="row">
+     
+           <div class="image">
+              <img src="images/about-img.svg" alt="">
+           </div>
+     
+           <div class="content">
+              <h3>Why Choose Us?</h3>
+              <p>At FED, we believe in the power of education to transform lives. Our platform is designed to provide you with access to high-quality courses from experts around the globe, all from the comfort of your own home. Whether you're looking to develop new skills, advance your career, or explore a new hobby, we have something for you.</p>
+              <a href="courses.html" class="inline-btn">our courses</a>
+           </div>
+     
+        </div>
+     
+        <div class="box-container">
+     
+           <div class="box">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                 <h3>+10k</h3>
+                 <p>online courses</p>
+              </div>
+           </div>
+     
+           <div class="box">
+              <i class="fas fa-user-graduate"></i>
+              <div>
+                 <h3>+40k</h3>
+                 <p>brilliant students</p>
+              </div>
+           </div>
+     
+           <div class="box">
+              <i class="fas fa-chalkboard-user"></i>
+              <div>
+                 <h3>+2k</h3>
+                 <p>expert tutors</p>
+              </div>
+           </div>
+     
+           <div class="box">
+              <i class="fas fa-briefcase"></i>
+              <div>
+                 <h3>100%</h3>
+                 <p>job placement</p>
+              </div>
+           </div>
+     
+        </div>
+     
+     </section> 
+     <form action="feedback.php"><center>
+      <a href="feedback.php" class="inline-btn">feedback</a></center>
+</body>
+</html>
